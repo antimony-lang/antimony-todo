@@ -1,0 +1,31 @@
+import "todo"
+
+fn init() {
+    init_text_field()
+    init_submit_button()
+}
+
+fn init_text_field() {
+    let text_field = document.getElementById("input_text")
+}
+
+fn init_submit_button() {
+    let button = document.getElementById("submit_button")
+    button.addEventListener("click", on_submit)
+}
+
+fn on_submit() {
+    let input_text = document.getElementById("input_text")
+    let text = input_text.value
+    append_todo(todo_new(text))
+    input_text.value = ""
+    
+}
+
+fn append_todo(todo: Todo) {
+    let container = document.getElementById("app")
+    let todo_element = document.createElement("li")
+    todo_element.innerText = todo.name
+
+    container.appendChild(todo_element)
+}

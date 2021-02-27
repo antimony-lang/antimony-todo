@@ -1,3 +1,6 @@
+import "todo"
+import "web"
+
 fn main() {
-    console.log("Hello Sailor!")
+    init()
 }

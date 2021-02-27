@@ -1,0 +1,11 @@
+struct Todo {
+    name: string
+    checked: bool
+}
+
+fn todo_new(name: string): Todo {
+    return new Todo {
+        name: name
+        checked: false
+    }
+}
