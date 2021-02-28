@@ -2,6 +2,8 @@
 
 This is an example application written in [Antimony](https://github.com/antimony-lang/antimony).
 
+[Try it out](https://antimony-lang.github.io/antimony-todo/)!
+
 ## Building
 
 Make sure Antimony is [installed](https://antimony-lang.github.io/antimony/latest/introduction/installation.html).
