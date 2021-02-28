@@ -1,11 +1,15 @@
-CC=sb
-ENTRY=src/main.sb
-TARGET=main.js
+SRC := $(shell find src -name "*.sb")
+OUT := main.js
 
-default: build
+SB ?= sb
+RM ?= rm -f
 
-build:
-	$(CC) build $(ENTRY) -o $(TARGET)
+all: $(OUT)
+
+$(OUT): $(SRC)
+	$(SB) build src/main.sb -o $(OUT)
 
 clean:
-	-rm -f *.js $(TARGET)
+	-$(RM) *.js $(OUT)
+
+.PHONY: all clean
