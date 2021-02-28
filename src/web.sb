@@ -23,9 +23,19 @@ fn on_submit() {
 }
 
 fn append_todo(todo: Todo) {
+    // Initialize elements
     let container = document.getElementById("app")
-    let todo_element = document.createElement("li")
-    todo_element.innerText = todo.name
+    let todo_element = document.createElement("div")
 
+    // Append checkbox 
+    let checkbox = document.createElement("input")
+    checkbox.type = "checkbox"
+    todo_element.appendChild(checkbox)
+
+    // Append text
+    let text = document.createTextNode(todo.name)
+    todo_element.appendChild(text)
+    
+    // Add todo to DOM
     container.appendChild(todo_element)
 }
